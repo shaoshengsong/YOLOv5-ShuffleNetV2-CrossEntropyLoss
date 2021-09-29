@@ -5,14 +5,14 @@ This repo code uses Softmax and CrossEntropyLoss instead of BCEWithLogitsLoss.Th
 There are classes that contain relationships（subset） that can be people, men. Mutually exclusive relationships that the class such as people, cats, and dogs. Try to improve the loss function when the classes of the dataset is mutually exclusive.  
 
 
-Because BCEWithLogitsLoss = Sigmoid + BCELoss.  
+## BCEWithLogitsLoss = Sigmoid + BCELoss.  
 BCEWithLogitsLoss adds Sigmoid to the loss function. The Sigmoid probability sum does not need to be 1.This can be done easily by just applying sigmoid function to each of raw scores. Note that the output probabilities will NOT sum to 1. The output predictions will be those classes that can beat a probability threshold.  
 
-CrossEntropyLoss = LogSoftmax + NLLLoss.  
+## CrossEntropyLoss = LogSoftmax + NLLLoss.  
 About softmax, each element will be in the range of 0 to 1, and the elements will add up to 1. This way, they can be interpreted as a probability distribution. For more clarification, the larger the input number, the larger the probabilities will be. It makes sure that the sum of all our output probabilities is equal to 1（or close to 1）.  
 
 
-PEOPLE WHO READ THIS ARTICLE ALSO READ  
+## PEOPLE WHO READ THIS ARTICLE ALSO READ  
 [Object detection YOLOv5 - Early Stopping mechanism](https://flyfish.blog.csdn.net/article/details/120163286).  
 [Object Detection YOLOv5 - Fusion of convolution layer and BN layer](https://flyfish.blog.csdn.net/article/details/120088043).  
 [Object detection YOLOv5 - Sample Assignment](https://flyfish.blog.csdn.net/article/details/119332396).  
